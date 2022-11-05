@@ -725,8 +725,8 @@ Options('TextSize', 'Text Size', syn and 18 or 14, 10, 24); -- cuz synapse fonts
 Options('MaxDistance', 'Max Distance', 2500, 100, 25000);
 Options('RefreshRate', 'Refresh Rate (ms)', 5, 1, 200);
 Options('YOffset', 'Y Offset', 0, -200, 200);
-Options('MenuKey', 'Menu Key', Enum.KeyCode.Unknown, 1);
-Options('ToggleKey', 'Toggle Key', Enum.KeyCode.Unknown, 1);
+Options('MenuKey', 'Menu Key', Enum.KeyCode.X, 1);
+Options('ToggleKey', 'Toggle Key', Enum.KeyCode.Y, 1);
 Options('ChangeColors', SENTINEL_LOADED and 'Sentinel Unsupported' or 'Change Colors', function()
 	if SENTINEL_LOADED then return end
 
