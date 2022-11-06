@@ -716,7 +716,7 @@ Options('ShowDistance', 'Show Distance', true);
 Options('ShowHealth', 'Show Health', true);
 Options('ShowBoxes', 'Show Boxes', true);
 Options('ShowTracers', 'Show Tracers', true);
-Options('ShowDot', 'Show Head Dot', false);
+Options('ShowDot', 'Show Head Dot', true);
 Options('VisCheck', 'Visibility Check', false);
 Options('Crosshair', 'Crosshair', false);
 Options('TextOutline', 'Text Outline', true);
@@ -1566,7 +1566,7 @@ function CreateMenu(NewPosition) -- Create Menu
 	Menu:AddMenuInstance('TopBarTextBR', 'Text', {
 		Size 		= 18;
 		Position	= shared.MenuDrawingData.Instances.TopBarTwo.Position + V2New(BaseSize.X - 75, 25);
-		Text		= 'by ic3w0lf';
+		Text		= 'Root';
 		Color		= Colors.Secondary.Light;
 		Visible		= true;
 		Transparency= 1;
@@ -2332,7 +2332,7 @@ local function UpdatePlayerData()
 
 						if Options.ShowName.Value then
 							NameTag.Visible		= true;
-							NameTag.Text		= v.Name .. (CustomPlayerTag and CustomPlayerTag(v) or '');
+							NameTag.Text		= v.Name .. ' | ' .. tostring(game.Players.LocalPlayer.Team) .. .(CustomPlayerTag and CustomPlayerTag(v) or '');
 							NameTag.Size		= Options.TextSize.Value;
 							NameTag.Outline		= Options.TextOutline.Value;
 							NameTag.Position	= V2New(ScreenPositionUpper.X, ScreenPositionUpper.Y) - V2New(0, NameTag.TextBounds.Y);
